@@ -1,0 +1,36 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+all                   1
+analyze_genome        1
+total                 2
+
+Select jobs to execute...
+
+[Fri Jan 30 16:02:57 2026]
+rule analyze_genome:
+    input: ../full_risk_test.vcf
+    output: resultado_teste.json
+    jobid: 1
+    reason: Missing output files: resultado_teste.json
+    resources: tmpdir=/tmp
+
+[Fri Jan 30 16:02:57 2026]
+Error in rule analyze_genome:
+    jobid: 1
+    input: ../full_risk_test.vcf
+    output: resultado_teste.json
+
+RuleException:
+WorkflowError in file /home/aquila/biosaas_fullstack/api_python/pipeline/Snakefile, line 18:
+Failed to open source file /home/aquila/biosaas_fullstack/api_python/pipeline/scripts/analyze_vcf.py
+FileNotFoundError: [Errno 2] No such file or directory: '/home/aquila/biosaas_fullstack/api_python/pipeline/scripts/analyze_vcf.py'
+  File "/home/aquila/biosaas_fullstack/api_python/pipeline/Snakefile", line 18, in __rule_analyze_genome
+  File "/usr/local/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2026-01-30T160257.746495.snakemake.log

@@ -1,0 +1,35 @@
+# --- Laravel ---
+web_laravel/vendor/
+web_laravel/node_modules/
+web_laravel/public/hot/
+web_laravel/public/storage
+web_laravel/storage/*.key
+web_laravel/.env
+web_laravel/.phpunit.result.cache
+web_laravel/storage/app/private/
+
+# --- Python ---
+api_python/__pycache__/
+api_python/*.pyc
+api_python/.env
+api_python/venv/
+api_python/.pytest_cache/
+api_python/.snakemake/
+
+# --- Data Lake & Arquivos Genômicos ---
+# Ignorar bancos de dados locais e arquivos pesados gerados pelo pipeline
+api_python/data_lake/genomic_catalog.db
+api_python/data_lake/raw_vcf/
+api_python/data_lake/processed_zarr/
+*.vcf
+*.vcf.gz
+*.zarr
+*.html
+
+# --- Sistema ---
+.DS_Store
+Thumbs.db
+.idea/
+
+# --- Scripts de Automação (com credenciais) ---
+upload_to_github.sh

@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule analyze_genome in file /home/aquila/biosaas_fullstack/api_python/pipeline/Snakefile, line 10:
+Missing input files for rule analyze_genome:
+    output: resultado_teste.json
+    affected files:
+        ../full_risk_test.vcf

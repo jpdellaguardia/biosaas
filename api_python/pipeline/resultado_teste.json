@@ -1,0 +1,24 @@
+{
+    "status": "COMPLETED",
+    "mode": "real_analysis",
+    "matches": 2,
+    "data": {
+        "name": "Usu\u00e1rio Teste",
+        "variants": [
+            {
+                "rsid": "rs6025",
+                "gene": "F5",
+                "condition": "Trombofilia (Fator V Leiden)",
+                "effect": "Risco aumentado de trombose (Co\u00e1gulos)",
+                "clinical_significance": "Risk Factor"
+            },
+            {
+                "rsid": "rs334",
+                "gene": "HBB",
+                "condition": "Anemia Falciforme",
+                "effect": "Tra\u00e7o Falciforme detectado (Portador)",
+                "clinical_significance": "Risk Factor"
+            }
+        ]
+    }
+}

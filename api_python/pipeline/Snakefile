@@ -1,0 +1,35 @@
+VCF_INPUT = config.get("input_vcf")     # Pode ser .vcf, .txt, .zip
+JSON_OUTPUT = config.get("output_json")
+DB_PATH = config.get("db_path")
+
+# Função para decidir o arquivo intermediário
+def get_analysis_input(wildcards):
+    if VCF_INPUT.endswith(".vcf"):
+        return VCF_INPUT
+    else:
+        # Se não for VCF, precisa passar pela conversão
+        return "temp/converted_data.vcf"
+
+rule all:
+    input:
+        JSON_OUTPUT
+
+# Regra Condicional: Só roda se a entrada NÃO for VCF
+rule convert_raw_data:
+    input:
+        VCF_INPUT
+    output:
+        "temp/converted_data.vcf"
+    script:
+        "scripts/convert_raw_to_vcf.py"
+
+# Regra Principal (Agora aceita tanto o original quanto o convertido)
+rule analyze_genome:
+    input:
+        get_analysis_input
+    output:
+        JSON_OUTPUT
+    params:
+        db = DB_PATH
+    script:
+        "scripts/analyze_vcf.py"

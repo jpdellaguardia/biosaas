@@ -1,0 +1,35 @@
+# Dados genômicos (muito grandes para GitHub)
+data_lake/
+*.vcf.gz
+*.zarr/
+*.tbi
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Imagens geradas (opcional - remova se quiser versionar)
+*.png
+*.jpg
+*.jpeg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,37 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+all                   1
+analyze_genome        1
+total                 2
+
+Select jobs to execute...
+
+[Fri Jan 30 16:06:28 2026]
+rule analyze_genome:
+    input: ../full_risk_test.vcf
+    output: resultado_teste.json
+    jobid: 1
+    reason: Missing output files: resultado_teste.json
+    resources: tmpdir=/tmp
+
+[Fri Jan 30 16:06:30 2026]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Fri Jan 30 16:06:30 2026]
+localrule all:
+    input: resultado_teste.json
+    jobid: 0
+    reason: Input files updated by another job: resultado_teste.json
+    resources: tmpdir=/tmp
+
+[Fri Jan 30 16:06:30 2026]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2026-01-30T160628.280953.snakemake.log

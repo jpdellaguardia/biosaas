@@ -1,0 +1,56 @@
+.
+├── api-python
+│   ├── data_lake
+│   │   ├── processed_zarr
+│   │   │   └── chr22_1000G_phase3.zarr
+│   │   └── raw_vcf
+│   ├── __pycache__
+│   ├── tests
+│   │   └── __pycache__
+│   └── venv
+│       ├── bin
+│       ├── include
+│       ├── lib
+│       │   └── python3.10
+│       ├── lib64 -> lib
+│       └── share
+│           ├── jupyter
+│           └── man
+└── web-laravel
+    ├── app
+    │   ├── Http
+    │   │   └── Controllers
+    │   ├── Jobs
+    │   ├── Models
+    │   └── Providers
+    ├── biosaas-fullstack
+    ├── bootstrap
+    │   └── cache
+    ├── config
+    ├── database
+    │   ├── factories
+    │   ├── migrations
+    │   └── seeders
+    ├── public
+    │   └── storage -> /home/aquila/biosaas-fullstack/web-laravel/storage/app/public
+    ├── resources
+    │   ├── css
+    │   ├── js
+    │   └── views
+    │       └── components
+    ├── routes
+    ├── storage
+    │   ├── app
+    │   │   ├── private
+    │   │   └── public
+    │   ├── framework
+    │   │   ├── cache
+    │   │   ├── sessions
+    │   │   ├── testing
+    │   │   └── views
+    │   └── logs
+    └── tests
+        ├── Feature
+        └── Unit
+
+54 directories
